@@ -1,7 +1,7 @@
 // Create a config file for API URLs
 const config = {
   API_URL: process.env.NODE_ENV === 'production' 
-    ? 'https://web-production-abc123.up.railway.app'  // 👈 Replace with your actual Railway URL
+    ? 'https://quiz-production-2796.up.railway.app'  // ✅ Correct Railway URL
     : 'http://localhost:5000'
 };
 
