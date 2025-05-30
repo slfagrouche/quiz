@@ -22,15 +22,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Configure CORS for production
-if os.getenv('RAILWAY_ENVIRONMENT'):
-    allowed_origins = [
-        os.getenv('VERCEL_URL', 'https://your-app-name.vercel.app'),
-        'https://*.vercel.app'
-    ]
-    CORS(app, origins=allowed_origins)
-else:
-    CORS(app)
+# Temporary fix - allow all origins (replace the CORS section)
+CORS(app, origins="*")
 
 # Initialize OpenAI client based on version
 if OPENAI_V1:
